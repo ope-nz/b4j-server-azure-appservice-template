@@ -1,0 +1,1 @@
+# b4j-server-azure-appservice-template
