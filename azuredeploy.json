@@ -46,7 +46,9 @@
             "sku": "[parameters('sku')]",
             "workerSize": "[parameters('workerSize')]",
             "numberOfWorkers": 1,
-            "javaVersion": "1.8.0_181"
+            "javaVersion": "1.8.0_181",
+            "javaContainer": "",
+            "javaContainerVersion": ""
         }
     }, {
         "apiVersion": "2015-08-01",
