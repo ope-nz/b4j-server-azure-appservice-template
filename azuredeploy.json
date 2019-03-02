@@ -61,7 +61,7 @@
         "properties": {
             "serverFarmId": "[parameters('hostingPlanName')]",
             "siteConfig": {
-              "appSettings": [{
+              "appSettings": ["properties":{
               "javaVersion": "1.8.0_181",
                 "javaContainer": "",
                 "javaContainerVersion": "",
