@@ -61,10 +61,10 @@
         "properties": {
             "serverFarmId": "[parameters('hostingPlanName')]",
             "javaVersion": "1.8.0_181",
-                "javaContainer": "",
-                "javaContainerVersion": "",
-                "webSocketsEnabled": true,
-                "phpVersion": "",
+            "javaContainer": "",
+            "javaContainerVersion": "",
+            "webSocketsEnabled": true,
+            "phpVersion": "",
             "siteConfig": {
               "appSettings": []
             }
