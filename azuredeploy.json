@@ -66,7 +66,12 @@
         "properties": {
             "serverFarmId": "[parameters('hostingPlanName')]",
             "siteConfig": {
-              "appSettings": []
+              "appSettings": [
+              "javaVersion": "1.8.0_181",
+                "javaContainer": "",
+                "javaContainerVersion": "",
+                "webSocketsEnabled": true,
+                "phpVersion": ""]
             }
         },
         "resources": [{
@@ -79,12 +84,7 @@
             "properties": {
                 "RepoUrl": "[parameters('repoUrl')]",
                 "branch": "[parameters('branch')]",
-                "IsManualIntegration": true,
-                "javaVersion": "1.8.0_181",
-                "javaContainer": "",
-                "javaContainerVersion": "",
-                "webSocketsEnabled": true,
-                "phpVersion": ""
+                "IsManualIntegration": true                
             }
         }]
     }]
