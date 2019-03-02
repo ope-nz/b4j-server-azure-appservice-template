@@ -66,6 +66,7 @@
             "siteConfig": {
               "appSettings": []
             },
+            "webSocketsEnabled": true
         },
         "resources": [{
             "apiVersion": "2015-08-01",
