@@ -1,0 +1,52 @@
+AppType=StandardJava
+Build1=Default,nz.ope.azure_template
+Group=Default Group
+Library1=jcore
+Library2=jserver
+Library3=javaobject
+Module1=hello
+Module2=hello_ws
+NumberOfFiles=0
+NumberOfLibraries=3
+NumberOfModules=2
+Version=7
+@EndOfDesignText@
+'Non-UI application (console / server application)
+#Region Project Attributes 
+	#CommandLineArgs:
+	#MergeLibraries: True 
+#End Region
+
+Sub Process_Globals
+	Dim srvr As Server
+End Sub
+
+Sub AppStart (Args() As String)
+	#if RELEASE	
+	Dim system, printstream As JavaObject
+	system.InitializeStatic("java.lang.System")
+	printstream.InitializeNewInstance("java.io.PrintStream", Array As Object("STDOUT.txt"))
+	system.RunMethod("setOut", Array As Object(printstream))
+	#End if
+	
+	Dim port As Int = 8080
+	If Args.Length > 0 Then port=Args(0)
+	srvr.Initialize("srvr")
+	srvr.AddHandler("","hello",False)
+	srvr.AddHandler("/hello","hello",False)
+	srvr.AddWebSocket("/hello_ws","hello_ws")
+	srvr.Port=port
+	srvr.StaticFilesFolder = File.Combine(File.DirApp, "www")
+	srvr.Start
+	
+	Log("Hello - this is logging")
+	Log(port)
+	Log(File.DirApp)
+	
+	StartMessageLoop
+End Sub
+
+'Return true to allow the default exceptions handler to handle the uncaught exception.
+Sub Application_Error (Error As Exception, StackTrace As String) As Boolean
+	Return True
+End Sub
