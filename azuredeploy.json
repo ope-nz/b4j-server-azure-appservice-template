@@ -48,7 +48,8 @@
             "numberOfWorkers": 1,
             "javaVersion": "1.8.0_181",
             "javaContainer": "",
-            "javaContainerVersion": ""
+            "javaContainerVersion": "",
+            "webSocketsEnabled": true
         }
     }, {
         "apiVersion": "2015-08-01",
@@ -65,8 +66,7 @@
             "serverFarmId": "[parameters('hostingPlanName')]",
             "siteConfig": {
               "appSettings": []
-            },
-            "webSocketsEnabled": true
+            }
         },
         "resources": [{
             "apiVersion": "2015-08-01",
