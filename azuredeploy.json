@@ -60,13 +60,13 @@
         },
         "properties": {
             "serverFarmId": "[parameters('hostingPlanName')]",
-            "siteConfig": {
-              "appSettings": ["properties":{
-              "javaVersion": "1.8.0_181",
+            "javaVersion": "1.8.0_181",
                 "javaContainer": "",
                 "javaContainerVersion": "",
                 "webSocketsEnabled": true,
-                "phpVersion": ""}]
+                "phpVersion": "",
+            "siteConfig": {
+              "appSettings": []
             }
         },
         "resources": [{
