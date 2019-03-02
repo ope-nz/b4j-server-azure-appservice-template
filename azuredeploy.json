@@ -49,7 +49,8 @@
             "javaVersion": "1.8.0_181",
             "javaContainer": "",
             "javaContainerVersion": "",
-            "webSocketsEnabled": true
+            "webSocketsEnabled": true,
+            "phpVersion": "",
         }
     }, {
         "apiVersion": "2015-08-01",
@@ -78,7 +79,12 @@
             "properties": {
                 "RepoUrl": "[parameters('repoUrl')]",
                 "branch": "[parameters('branch')]",
-                "IsManualIntegration": true
+                "IsManualIntegration": true,
+                "javaVersion": "1.8.0_181",
+                "javaContainer": "",
+                "javaContainerVersion": "",
+                "webSocketsEnabled": true,
+                "phpVersion": ""
             }
         }]
     }]
